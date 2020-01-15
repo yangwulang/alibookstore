@@ -1,0 +1,17 @@
+server:
+  port: 8083
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/
+spring:
+  application:
+    name: user
+  profiles:
+    include: common
+  thymeleaf:
+    check-template: true
+    prefix: classpath:/static/*
+    suffix: html

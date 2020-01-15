@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/alibookstore.iml" filepath="$PROJECT_DIR$/alibookstore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-eureka/alibookstore-eureka.iml" filepath="$PROJECT_DIR$/alibookstore-eureka/alibookstore-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-web-admin/alibookstore-web-admin.iml" filepath="$PROJECT_DIR$/alibookstore-web-admin/alibookstore-web-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-web-user/alibookstore-web-user.iml" filepath="$PROJECT_DIR$/alibookstore-web-user/alibookstore-web-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-common/alibookstorecommon.iml" filepath="$PROJECT_DIR$/alibookstore-common/alibookstorecommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-db/alibookstoredb.iml" filepath="$PROJECT_DIR$/alibookstore-db/alibookstoredb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-service/alibookstoreservice.iml" filepath="$PROJECT_DIR$/alibookstore-service/alibookstoreservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alibookstore-service-api/alibookstoreserviceapi.iml" filepath="$PROJECT_DIR$/alibookstore-service-api/alibookstoreserviceapi.iml" />
+    </modules>
+  </component>
+</project>

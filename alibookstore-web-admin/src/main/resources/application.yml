@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  profiles:
+    include: common
+  application:
+    name: admin
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8081/eureka/

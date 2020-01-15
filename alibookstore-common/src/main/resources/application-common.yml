@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookstore?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: yangwulang
+  cache:
+    redis:
+      cache-null-values: true
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 30000
+    password:
+    database: 0
+    jedis:
+      pool:
+        max-wait: -1ms
+        max-active: 8
+mybatis:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+logging:
+  level:
+    com.yangwulang.dao: debug
+
+

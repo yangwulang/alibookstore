@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangwulang.dao.BookDao">
+
+    <select id="getBookById" resultType="com.yangwulang.pojo.Book">
+        select * from book_info where id = #{id}
+    </select>
+
+    <insert id="insertBook" parameterType="com.yangwulang.pojo.Book">
+        insert into book_info values
+        (${book.id},'${book.bookName}','${book.imgUrl}','${book.cetegtory}','${book.description}')
+    </insert>
+
+    <select id="selectAllBook" resultType="com.yangwulang.pojo.Book">
+        select * from book_info order by cetegtory
+    </select>
+
+    <select id="selectBookByName" resultType="com.yangwulang.pojo.Book">
+        select * from book_info where bookName = #{bookname}
+    </select>
+
+    <select id="selectBookByCount" resultType="com.yangwulang.pojo.Book">
+        select * from book_info where bookName like '%${bookCount}%' or cetegtory='%${bookCount}%'
+    </select>
+
+    <select id="selectBookByCetegtory" resultType="com.yangwulang.pojo.Book">
+        select * from book_info where cetegtory=#{cet}
+    </select>
+
+    <select id="selectBookCount" resultType="int">
+        select count(id) from book_info
+    </select>
+
+
+    <delete id="deleteBookById" parameterType="long">
+        delete from book_info where id= #{id}
+    </delete>
+
+</mapper>

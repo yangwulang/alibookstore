@@ -1,0 +1,4 @@
+# Project exclude paths
+/alibookstore-common/target/
+/alibookstore-service/target/
+/alibookstore-service-api/target/

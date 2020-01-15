@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="alibookstoredb" />
+        <module name="alibookstore-web-admin" />
+        <module name="alibookstore-eureka" />
+        <module name="alibookstoreserviceapi" />
+        <module name="alibookstore-web-user" />
+        <module name="alibookstore-swing" />
+        <module name="alibookstoreservice" />
+        <module name="alibookstorecommon" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="alibookstore" target="1.8" />
+      <module name="alibookstore-eureka" target="1.8" />
+      <module name="alibookstore-swing" target="1.7" />
+      <module name="alibookstore-web-admin" target="1.8" />
+      <module name="alibookstore-web-user" target="1.8" />
+      <module name="alibookstorecommon" target="1.8" />
+      <module name="alibookstoredb" target="1.8" />
+      <module name="alibookstoreservice" target="1.8" />
+      <module name="alibookstoreserviceapi" target="1.8" />
+      <module name="alibookstoreweb" target="1.8" />
+      <module name="alibookstoreweboo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="alibookstore" options="-parameters" />
+      <module name="alibookstore-eureka" options="-parameters" />
+      <module name="alibookstore-swing" options="-parameters" />
+      <module name="alibookstore-web-admin" options="-parameters" />
+      <module name="alibookstore-web-user" options="-parameters" />
+      <module name="alibookstorecommon" options="-parameters" />
+      <module name="alibookstoredb" options="-parameters" />
+      <module name="alibookstoreservice" options="-parameters" />
+      <module name="alibookstoreserviceapi" options="-parameters" />
+      <module name="alibookstoreweb" options="-parameters" />
+      <module name="alibookstoreweboo" options="-parameters" />
+    </option>
+  </component>
+</project>

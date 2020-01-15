@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangwulang.dao.AdminDao">
+    <select id="getAdminById" resultType="com.yangwulang.pojo.Admin">
+        select * from `user` where id = #{id}
+    </select>
+
+    <select id="getAdminByNameAndPassWord" resultType="com.yangwulang.pojo.Admin">
+        select * from admin where name=#{name} and password=#{pass}
+    </select>
+    <select id="getAdminPassword" resultType="string">
+        select password from admin where email=#{email}
+    </select>
+    <select id="fuzzySearchUser" resultType="com.yangwulang.pojo.User">
+        select * from user where name like #{files} or telphone like #{files}
+        or email like '%${files}%' or id like '%${files}%'
+    </select>
+
+    <select id="fuzzySearchNotice" resultType="com.yangwulang.pojo.Notice">
+        select * from notice where title like '%${files}%' or body like '%${files}%'
+    </select>
+
+    <insert id="saveUser" parameterType="com.yangwulang.pojo.Admin">
+        insert into user
+        (id,name,password,telphone,address,islowadmin,email,activecode,isactive)
+        values
+        (#{user.id},#{user.name},#{user.password},#{user.telPhone},
+        #{user.address},#{user.isLowAdmin},#{user.email},#{user.activeCode},#{user.isActive})
+    </insert>
+    <update id="updateUser" parameterType="com.yangwulang.pojo.User">
+        update user set name='${user.name}',password='${user.password}',telphone='${user.telPhone}'
+        ,email='${user.email}',address='${user.address}',isactive=${user.isActive},
+        islowadmin=${user.isLowAdmin},activecode='${user.activeCode}' where id='${user.id}'
+    </update>
+    <select id="selectAllUser" resultType="com.yangwulang.pojo.User">
+        select * from user
+    </select>
+
+    <update id="deleteUserById" parameterType="com.yangwulang.pojo.User">
+        delete from user where id=#{user.id}
+    </update>
+
+    <select id="selectAllNotice" resultType="com.yangwulang.pojo.Notice">
+        select * from notice
+    </select>
+
+    <select id="getAllNoticeCount" resultType="int">
+        select count(id) from notice
+    </select>
+
+    <select id="getAllUserCount" resultType="int">
+        select count(id) from user
+    </select>
+
+    <insert id="insertNotice" parameterType="com.yangwulang.pojo.Notice">
+        insert into notice values ('${notice.id}','${notice.title}','${notice.body}',now())
+    </insert>
+
+    <update id="updateNotice" parameterType="com.yangwulang.pojo.Notice">
+        update notice set title='${notice.title}',body='${notice.body}',time=now() where id='${notice.id}'
+    </update>
+    <update id="updateBook" parameterType="com.yangwulang.pojo.Book">
+        update book set
+        bookName='${book.bookName}',imgUrl='${book.imgUrl}',cetegtory='${book.cetegtory}',description='${book.description}'
+        where id='${book.id}'
+    </update>
+
+    <delete id="deleteNoticeById" parameterType="long">
+        delete from notice where id=#{id}
+    </delete>
+</mapper>
